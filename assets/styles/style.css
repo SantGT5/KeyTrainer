@@ -45,6 +45,13 @@
     margin-top: 4%;
 }
 
+#scoreIncorrect{
+    color: #9a9998;
+    font-family: Ubuntu Mono,Lucida Console,monospace;
+    font-size: 1.5rem;
+    margin-top: 20%;
+}
+
 
 #text-Input{
     align-items: center;

@@ -1,26 +1,20 @@
 
 
 
-let textArr = ["mequetrefe", "amoitar", "piripaque", "serelepe", "siricutico", "bugiganga", "xexar", "azuado"]
-
-
+let textArr = ["yes", "has", "bashaps", "cas", "visit", "miss", "rush", "ecstainer", "kiss", "observed", "lose", "was", "myster", "master", "lust", "dislike", "passed", "best", "ves", "wish", "dose", "its"]
 
 
 function splitText(textArr) {
   
-  
-
 let myString = textArr.join(' ').split('')
 
 return myString
 
 }
 
-
 function displayText() {
 
   textArr.sort(() => Math.random() - 0.5)
-  console.log(textArr)
 
   let currentRow = document.getElementById('text-Input')
   
@@ -38,7 +32,7 @@ function displayText() {
 function btnReset() {
 
 
-  let mystring = splitText(textArr)
+  // let mystring = splitText(textArr)
 
   // for(let i = 0; i < mystring.length; i++){
 
@@ -60,29 +54,6 @@ function btnReset() {
   incorrect = 0
 }
 
-window.addEventListener("load" , function () {
-  displayText()
-
-})
-
-// function btnShuffle(){
-  
-//   let shuffledArray = textArr.sort(() => Math.random() - 0.5)
-  
-// console.log(shuffledArray)
-
-//   return shuffledArray
-
-// }
-
-
-
-
-
-
-
-
-
 
 
 let correct = 0
@@ -94,11 +65,7 @@ document.addEventListener('keydown', (event) => {
   
   for(i; i < mystring.length; i++){
 
-    console.log("array", mystring[i])
-    console.log("event.key", event.key)
-
     if(event.key == mystring[i]){
-      console.log('correct character')
 
       let letter = document.getElementById('text-Input')
       letter.innerHTML = letter.innerHTML.replace('<span>'+mystring[i]+'</span>', '<span style="background-color:White; color:black">'+mystring[i]+'</span>')
@@ -106,8 +73,6 @@ document.addEventListener('keydown', (event) => {
       correct++
       break;
     } else {
-      console.log('wrong character')
-      console.log(mystring[i])
       let letter = document.getElementById('text-Input')
       letter.innerHTML = letter.innerHTML.replace('<span>'+mystring[i]+'</span>', '<span style="background-color:White; color:red">'+mystring[i]+'</span>')
       
@@ -116,15 +81,30 @@ document.addEventListener('keydown', (event) => {
     } 
   }
 
-// if(correct === mystring.length){
-//   btnReset()
-// }
 
-if(correct >= 0 && correct >= mystring.length){
-  document.getElementById('scoreIncorrect').innerHTML = "Erros: " + incorrect + " of 71"
-  document.getElementById('infoReset').innerHTML = "Press button Reset!"
+if(i >= 0 && i >= 124){
+    document.getElementById('scoreIncorrect').innerHTML = "Erros: " + incorrect + " of 124"
+    
 }
+
+if(incorrect > 5 && incorrect <= 10 && i >= 124){
+  document.getElementById('infoReset').innerHTML = "Nice Bro!"
+}else if(incorrect > 10 && incorrect <= 20 && i >= 124){
+  document.getElementById('infoReset').innerHTML = "better play again.."
+}else if(incorrect > 20 && incorrect <= 30 && i >= 124){
+  document.getElementById('infoReset').innerHTML = "Really? You have" + incorrect + "error.."
+}else if(incorrect > 30 && i >= 124){
+  document.getElementById('infoReset').innerHTML = "Better turn off the game.."
+}else if(incorrect <= 5 && i >= 124){
+  document.getElementById('infoReset').innerHTML = "You are Pro!!"
+}
+
+
 
 })
 
 
+window.addEventListener("load" , function () {
+  displayText()
+
+})
