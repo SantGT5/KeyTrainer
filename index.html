@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Document</title>
+  </head>
+  <body style="background-color: #222020">
+    <section>
+      <div class="d-flex justify-content-around">
+        <h2 class="result-score title">Score</h2>
+
+        <h1 class="title">KeyTrainer</h1>
+
+        
+        <button class="btn-shuffle" onclick="btnReset()">
+          <i class="fas fa-sync-alt fa-spin" style="color: #9a9998"></i>
+    </button>
+        
+      </div>
+    </section>
+  
+    <section>
+
+        <div class="d-flex justify-content-around">
+            <div class="scoreList">
+              <ul>
+                <li id="scoreIncorrect">Errors: </li>
+                <li id="infoReset"></li>
+              </ul>
+            </div>
+
+            <div id="text-Input"></div>
+            
+            <p class="luck">Good Luck !!</p>
+
+        </div>
+        
+    </section>
+
+    
+    <script src="./assets/script/index.js"></script>
+  </body>
+</html>
