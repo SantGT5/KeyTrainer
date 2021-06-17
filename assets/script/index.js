@@ -83,7 +83,7 @@ document.addEventListener('keydown', (event) => {
 
 
 if(i >= 0 && i <= 124){
-    document.getElementById('scoreIncorrect').innerHTML = "Erros: " + incorrect + " of 124"
+    document.getElementById('scoreIncorrect').innerHTML = "Errors: " + incorrect + " of 124"
     
 }
 
