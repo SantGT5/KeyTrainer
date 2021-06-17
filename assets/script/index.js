@@ -103,7 +103,7 @@ if(incorrect > 5 && incorrect <= 10 && i >= 124){
 
 })
 
-
+ 
 window.addEventListener("load" , function () {
   displayText()
 
